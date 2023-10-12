@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card" style="width: 18rem; border-radius: 10px;">
+            <img src="https://th.bing.com/th/id/OIP.NqY3rNMnx2NXYo3KJfg43gHaHa?pid=ImgDet&rs=1" class="card-img-top">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <br>
+          <br>
+          <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Nombre:</p>
+          <br>
+          <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Departamento:</p>
+          <br>
+          <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Area:</p>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-floating">
+            <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+              <option selected>Seleccione una opción</option>
+              <option value="1">Uno</option>
+              <option value="2">Dos</option>
+              <option value="3">Tres</option>
+            </select>
+            <label for="floatingSelect">Motivo</label>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="form-floating">
+            <input id="startDate" class="form-control" type="date" [(ngModel)]="fechaInicio"/>
+            <label for="floatingSelect">Fecha de Inicio</label>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="form-floating">
+            <input id="endDate" class="form-control" type="date" [(ngModel)]="fechaFin"/>
+            <label for="floatingSelect">Fecha de Fin</label>
+          </div>
+        </div>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" [(ngModel)]="isChecked" id="defaultCheck1">
+        <label class="form-check-label" for="defaultCheck1">
+          Otro
+        </label>
+      </div>      
+      <div class="col-md-6">
+      <div class="form-floating mb-3" *ngIf="isChecked">
+        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+        <label for="floatingTextarea2">Comentarios</label>
+      </div>
+    </div>
+    </div> 
+    
+    <div class="container">
+      <div class="text-center">
+        <button class="btn btn-danger mx-2">Cancelar</button>
+        <button class="btn btn-primary mx-2" (click)="abrirModal()">Guardar</button>  
+      </div>
+    </div>
+    <div class="modal" tabindex="-1" #miModal>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Enviar Solicitud</h5>
+        <button type="button" class="btn-close" (click)="cerrarModal()" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>¿Está seguro de que desea enviar esta solicitud?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="cerrarModal()">Cerrar</button>
+        <button type="button" class="btn btn-primary">Enviar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
