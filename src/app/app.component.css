@@ -1,0 +1,15 @@
+.texto-derecha {
+    margin-top: 10px;
+    margin-left: auto;
+}
+
+.icono-button {
+    background: none;
+    border: none;
+    padding: 20;
+    cursor: pointer;
+}
+
+.icono {
+    fill:currentColor;
+}

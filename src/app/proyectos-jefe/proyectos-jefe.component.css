@@ -1,0 +1,17 @@
+body {
+    padding: 40px; /* Añade relleno al cuerpo de la página */
+    margin: 40px; /* Añade margen al cuerpo de la página */
+    margin-left: 250px;
+    margin-right: 250px;
+  }
+
+  .icono-button {
+    background: none;
+    border: none;
+    padding: 20;
+    cursor: pointer;
+}
+
+.icono {
+    fill:currentColor;
+}

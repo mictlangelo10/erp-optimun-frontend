@@ -15,7 +15,7 @@
             <img src="https://th.bing.com/th/id/OIP.NqY3rNMnx2NXYo3KJfg43gHaHa?pid=ImgDet&rs=1" class="card-img-top">
           </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 texts">
           <br>
           <br>
           <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Nombre:</p>
@@ -29,12 +29,13 @@
       <div class="row">
         <div class="col-md-6">
           <div class="form-floating">
-            <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-              <option selected>Seleccione una opción</option>
+            <select class="form-select" id="floatingSelect" aria-label="Floating label select example" [(ngModel)]="selectedOption">
+              <option value="0" selected>Seleccione una opción</option>
               <option value="1">Uno</option>
               <option value="2">Dos</option>
               <option value="3">Tres</option>
-            </select>
+              <option value="4">Otro</option>
+          </select>
             <label for="floatingSelect">Motivo</label>
           </div>
         </div>
@@ -51,17 +52,12 @@
           </div>
         </div>
       </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" [(ngModel)]="isChecked" id="defaultCheck1">
-        <label class="form-check-label" for="defaultCheck1">
-          Otro
-        </label>
-      </div>      
-      <div class="col-md-6">
-      <div class="form-floating mb-3" *ngIf="isChecked">
-        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-        <label for="floatingTextarea2">Comentarios</label>
-      </div>
+    
+      <div class="col-md-6" *ngIf="selectedOption == '4'">
+        <div class="form-floating mb-3">
+            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+            <label for="floatingTextarea2">Comentarios</label>
+        </div>
     </div>
     </div> 
     

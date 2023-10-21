@@ -13,6 +13,7 @@ export class EmpleadoComponent {
 
   fechaInicio: string = '';
   fechaFin: string = '';
+  public selectedOption: string = '0';
 
    // Variable para el estado del checkbox
    public isChecked: boolean = false;

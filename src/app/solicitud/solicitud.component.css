@@ -1,7 +1,9 @@
 body {
-    padding: 20px; /* Añade relleno al cuerpo de la página */
-    margin: 20px; /* Añade margen al cuerpo de la página */
-  }
+  padding: 40px; /* Añade relleno al cuerpo de la página */
+  margin: 40px; /* Añade margen al cuerpo de la página */
+  margin-left: 250px;
+  margin-right: 250px;
+}
 
   .card {
     margin-bottom: 20px; /* Añade margen en la parte inferior de la tarjeta */
